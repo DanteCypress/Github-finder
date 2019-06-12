@@ -10,7 +10,9 @@ class App extends Component {
         <nav className="navbar bg-primary">
           <Navbar title="Github Finder" icon="fab fa-github" />
         </nav>
-        <Users />
+        <div className="container">
+          <Users />
+        </div>
       </div>
     );
   }
