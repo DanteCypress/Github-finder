@@ -1,12 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
+import Navbar from "./components/layouts/Navbar";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <nav className="navbar bg-primary">
+        <Navbar />
+      </nav>
+    );
+  }
 }
 
 export default App;
