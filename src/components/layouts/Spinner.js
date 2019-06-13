@@ -1,15 +1,13 @@
 import React, { Fragment } from "react";
-import spinner from "./spinner.gif";
+import { WaveSpinner } from "react-spinners-kit";
 
 const Spinner = () => (
   <Fragment>
-    <img
-      src={spinner}
-      alt="Loading..."
+    <WaveSpinner
+      color="#58537c"
       style={{
-        width: "200px",
-        margin: "auto",
-        display: "block"
+        position: "relative",
+        alignItems: "center"
       }}
     />
   </Fragment>

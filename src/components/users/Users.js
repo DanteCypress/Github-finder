@@ -1,11 +1,11 @@
 import React from "react";
 import UserItem from "./UserItem";
-import Spinner from "../layouts/Spinner";
+import WaveSpinner from "../layouts/Spinner";
 import PropTypes from "prop-types";
 
 const Users = ({ users, loading }) => {
   if (loading) {
-    return <Spinner />;
+    return <WaveSpinner />;
   } else {
     return (
       <div style={userStyle}>
@@ -17,7 +17,7 @@ const Users = ({ users, loading }) => {
   }
 };
 
-UserItem.propTypes = {
+Users.propTypes = {
   users: PropTypes.array.isRequired,
   loading: PropTypes.bool.isRequired
 };

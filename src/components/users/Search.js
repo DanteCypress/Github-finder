@@ -4,15 +4,21 @@ export class Search extends Component {
   state = {
     text: ""
   };
-  onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  onChange = e => this.setState({ [e.target.name]: e.target.value });
 
-  onSubmit = e => {};
+  onSubmit = e => {
+    e.preventDefault();
+    if (this.state.text === "") {
+      this.props.setAlert("Please enter something", "light");
+    } else {
+      this.props.searchUsers(this.state.text);
+      this.setState({ text: "" });
+    }
+  };
   render() {
     return (
       <div>
-        <form onSumbit={this.onSubmit} className="form">
+        <form onSubmit={this.onSubmit} className="form">
           <input
             type="text"
             name="text"
