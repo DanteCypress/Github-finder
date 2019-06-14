@@ -72,7 +72,7 @@ class App extends Component {
       <Router>
         <div>
           <nav className="navbar bg-primary">
-            <Navbar title="Github Finder" icon="fab fa-github" />
+            <Navbar title=" Github Finder" icon="fab fa-github" />
           </nav>
 
           <div className="container">
