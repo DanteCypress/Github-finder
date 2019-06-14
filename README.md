@@ -11,10 +11,12 @@ CD into Folder
 
 ### Installing
 
-Yarn Install
+Install Dependencies
 ```
 yarn install
 ```
 
 Start Project
- ```yarn start```
+ ```
+ yarn start
+ ```
