@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
 const Navbar = ({ icon, title }) => {
   return (
@@ -13,7 +12,7 @@ const Navbar = ({ icon, title }) => {
   );
 };
 Navbar.defaultProps = {
-  title: "Github Finder",
+  title: " Github Finder",
   icon: "fab fa-github"
 };
 
