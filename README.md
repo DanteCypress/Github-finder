@@ -9,8 +9,6 @@ git clone https://github.com/DanteCypress/Github-finder.git
 ```
 CD into Folder
 
-Yarn Install
-
 ### Installing
 
 Yarn Install
