@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import WaveSpinner from "../layouts/Spinner";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Repos from "../repos/Repos";
 
 export class User extends Component {
   componentDidMount() {
@@ -12,7 +13,8 @@ export class User extends Component {
     loading: PropTypes.bool.isRequired,
     user: PropTypes.object.isRequired,
     getUser: PropTypes.func.isRequired,
-    getUserRepos: PropTypes.func.isRequired
+    getUserRepos: PropTypes.func.isRequired,
+    repos: PropTypes.array.isRequired
   };
 
   render() {
@@ -32,7 +34,7 @@ export class User extends Component {
       company
     } = this.props.user;
 
-    const { loading } = this.props;
+    const { loading, repos } = this.props;
     if (loading) return <WaveSpinner />;
     return (
       <Fragment>
@@ -100,6 +102,7 @@ export class User extends Component {
           <div className="badge badge-light">Public Repos: {public_repos}</div>
           <div className="badge badge-dark">Public Gist : {public_gists}</div>
         </div>
+        <Repos repos={repos} />
       </Fragment>
     );
   }
